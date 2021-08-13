@@ -1,5 +1,5 @@
 def from_7_to_8x4x4(a):
-    b = [a & 0b01111111 for _ in range(3)]
+    b = [a & 0b001111111 for _ in range(3)]
     b = [i >> j for i, j in zip(b, [0, 1, 2])]
     b = [i               & 0b001001001 for i in b]
     b = [(i ^ (i >> 2))  & 0b000010011 for i in b]
